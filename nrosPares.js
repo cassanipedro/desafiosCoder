@@ -1,28 +1,16 @@
-function nacimiento(usuarioedad){
-    const anio=fecha.getFullYear();
-let r=anio-usuarioedad
-return r
+let numero =prompt("ingrese un numero del 1 al 10 para saber si es primo: ")
+alert(primo(numero))
+function primo(numero){
+    let mensaje='es primo';
+if(numero==0||numero==1||numero==4){
+    mensaje ="no es primo"}
+    for (let x =2;x<numero/2;x++){
+        if (numero% x==0){
+            mensaje='no es primo'
+        }
+    }
+    return mensaje
 }
-function random(min,max){
-return Math.random()*(max-min)+min;
-}
-let usuario=prompt("ingrese su edad: ")
-alert("Usted nacio en el año "+ toString(nacimiento(usuario)))
-
-
-nro=random(1,100)
-let nroUsuario;
-let intentos;
-while (nroUsuario!=nro){
-nroUsuario=prompt("adivine el nro secreto: ")
-if (nroUsuario<nro){
-    alert("el nro secreto es mas bajo")
-}else{alert("el nro secreto es mas alto")
-}
-++intentos
-nroUsuario=prompt("adivine el nro secreto: ")
-}
-alert ("Felicitaciones lo lograste en: "+intentos+" intentos")
 
 
 
